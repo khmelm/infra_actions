@@ -69,4 +69,4 @@ jobs:
           sudo docker pull ${{ secrets.MY_SECRET_NAME }}/infra_actions:v1
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 ${{ secrets.MY_SECRET_NAME }}/infra_actions:v1
+          sudo docker run --rm -d -p 5000:5000 $${{ secrets.MY_SECRET_USER }}/infra_actions:v1
